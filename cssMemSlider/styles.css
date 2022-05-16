@@ -77,16 +77,16 @@ img {
 .dot {
   display: flex;
   align-items: center;
-  width: 4rem;
-  height: 4rem;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
   background: transparent;
 }
 
 .button {
   margin: 0 auto;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
   background-color: #fff;
   border: 0.2rem solid #fff;
   border-radius: 100%;
@@ -158,4 +158,40 @@ img {
 
 #meme5:checked ~ .navigation > .description > .meme-description {
   transform: translate(calc(100% * -4));
+}
+
+@media (max-width: 1300px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    width: 50vw;
+  }
+
+  .description {
+    min-width: 60%;
+    width: 60%;
+  }
+
+  .controls {
+    width: 40%;
+  }
+}
+
+@media (max-width: 670px) {
+  .container {
+    width: 80vw;
+  }
+
+  .navigation {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .description {
+    min-width: 100%;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
