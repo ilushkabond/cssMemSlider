@@ -1,0 +1,1 @@
+[https://ilushkabond.github.io/cssMemSlider/cssMemSlider/index.html](https://ilushkabond.github.io/cssMemSlider/cssMemSlider/index.html)
