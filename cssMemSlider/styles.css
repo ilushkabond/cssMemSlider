@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(47, 55, 56);
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 10px;
+  color: #fff;
+}
+
+input {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1vw;
+  overflow: hidden;
+}
+
+.gallery {
+  width: calc(500% + 4 * 2vw);
+  height: 100%;
+  display: flex;
+  gap: 1vw;
+  transition: all 0.5s ease-in-out;
+}
+
+.image {
+  width: calc((100% + 2vw) / 5);
+}
+
+.navigation {
+  min-width: 60%;
+  display: flex;
+  overflow: hidden;
+  padding-top: 1vw;
+  width: 100%;
+}
+
+.description {
+  min-width: 65%;
+  display: flex;
+  overflow: hidden;
+}
+
+.meme-description {
+  min-width: 100%;
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+}
+
+.dot {
+  display: flex;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  background: transparent;
+}
+
+.button {
+  margin: 0 auto;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #fff;
+  border: 0.2rem solid #fff;
+  border-radius: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.dot:hover .button {
+  filter: invert(0.5);
+}
+
+.dot:active .button {
+  transform: scale(0.6);
+  filter: invert(0.5);
+}
+
+#meme1:checked~.navigation>.controls>.dot>.button--1,
+#meme2:checked~.navigation>.controls>.dot>.button--2,
+#meme3:checked~.navigation>.controls>.dot>.button--3,
+#meme4:checked~.navigation>.controls>.dot>.button--4,
+#meme5:checked~.navigation>.controls>.dot>.button--5 {
+  background-color: transparent;
+  border: 0.4rem solid #fff;
+}
+
+#meme1:checked~.navigation>.controls>.dot--1:hover .button--1,
+#meme2:checked~.navigation>.controls>.dot--2:hover .button--2,
+#meme3:checked~.navigation>.controls>.dot--3:hover .button--3,
+#meme4:checked~.navigation>.controls>.dot--4:hover .button--4,
+#meme5:checked~.navigation>.controls>.dot--5:hover .button--5 {
+  background-color: transparent;
+  border: 0.4rem solid #000;
+}
+
+#meme1:checked ~ .gallery {
+  transform: translate(calc(((100% + 2vw) / 5) * 2));
+}
+
+#meme1:checked ~ .navigation > .description {
+  transform: translate(0);
+}
+
+#meme2:checked ~ .gallery {
+  transform: translate(calc(((100% + 2vw) / 5) * 1));
+}
+
+#meme2:checked ~ .navigation > .description > .meme-description {
+  transform: translate(calc(100% * -1));
+}
+
+#meme3:checked ~ .gallery {
+  transform: translate(calc(((100% + 2vw) / 5) * 0));
+}
+
+#meme3:checked ~ .navigation > .description > .meme-description {
+  transform: translate(calc(100% * -2));
+}
+
+#meme4:checked ~ .gallery {
+  transform: translate(calc(((100% + 2vw) / 5) * -1));
+}
+
+#meme4:checked ~ .navigation > .description > .meme-description {
+  transform: translate(calc(100% * -3));
+}
+
+#meme5:checked ~ .gallery {
+  transform: translate(calc(((100% + 2vw) / 5) * -2));
+}
+
+#meme5:checked ~ .navigation > .description > .meme-description {
+  transform: translate(calc(100% * -4));
+}
+
+@media (max-width: 1300px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    width: 50vw;
+  }
+
+  .description {
+    min-width: 60%;
+    width: 60%;
+  }
+
+  .controls {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 80vw;
+  }
+
+  .navigation {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .description {
+    min-width: 100%;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
