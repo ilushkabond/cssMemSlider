@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>CSS Mem Slider</title>
+</head>
+<body>
+  <main class="container">
+    <input type="radio" name="meme" id="meme1" checked>
+    <input type="radio" name="meme" id="meme2">
+    <input type="radio" name="meme" id="meme3">
+    <input type="radio" name="meme" id="meme4">
+    <input type="radio" name="meme" id="meme5">
+    <div class="gallery">
+      <div class="slide">
+        <img src="./assets/meme1.jpg" alt="meme1">
+      </div>
+      <div class="slide">
+        <img src="./assets/meme2.jpg" alt="meme2">
+      </div>
+      <div class="slide">
+        <img src="./assets/meme3.jpg" alt="meme3">
+      </div>
+      <div class="slide">
+        <img src="./assets/meme4.jpg" alt="meme4">
+      </div>
+      <div class="slide">
+        <img src="./assets/meme5.jpg" alt="meme5">
+      </div>
+    </div>
+    <div class="navigation">
+      <div class="description">
+        <p class="meme-description">People are the hardest part of this job</p>
+        <p class="meme-description">Dating a programmer</p>
+        <p class="meme-description">cAn YoU HaCk mY fRiEnDs InStA?</p>
+        <p class="meme-description">I love javascript</p>
+        <p class="meme-description">Mood Swings Are Real</p>
+      </div>
+      <div class="controls">
+        <label for="meme" class="dot dot--1"><span class="button button--1"></span></label>
+        <label for="meme" class="dot dot--2"><span class="button button--2"></span></label>
+        <label for="meme" class="dot dot--5"><span class="button button--3"></span></label>
+        <label for="meme" class="dot dot--3"><span class="button button--4"></span></label>
+        <label for="meme" class="dot dot--4"><span class="button button--5"></span></label>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
